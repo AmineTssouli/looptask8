@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+function getTheFactorialValue() {
+   
+    value = Number(document.getElementById("number1").value)
+    result = 1
+
+
+    if (value < 0 || isNaN(value)) {
+        result = "Unspecified"
+    }
+    else if (value == 0) {
+        result = 1
+    }
+    else {
+        for (i=2; i<=value; i++){
+            result *= i
+           
+       
+        }
+    
+    } 
+
+
+    document.getElementById("result").innerHTML = "The result is <b>"+ result+"</b>"
+
+
+}
+function addDigitsOfNumber() {
+    value = Number(document.getElementById("number2").value)
+    result = 1
+    if (value < 0 || isNaN(value)) {
+        result = "Unspecified"
+    }
+    else if (value == 0) {
+        result = 0
+    }
+    else {
+        for (i=2; i<=value; i++){
+            result += i
+           
+       
+        }
+    
+    }
+
+
+    document.getElementById("result2").innerHTML = "The result is <b>"+ result +"</b>"
+}
+
+function SumOfOddsAndEven() {
+    value = Number(document.getElementById("number3").value)
+    odd = 0
+    even = 0
+    if (value < 0 || isNaN(value)) {
+        result = "Unspecified"
+    }
+    else if (value == 0) {
+        result = 0
+    }
+    else {
+        for (i=1; i<=value; i++){
+
+            if (i%2 == 0) even += i
+            if (i%2 != 0) odd += i
+           
+       
+        }
+    
+    }
+
+
+    document.getElementById("result3").innerHTML = "The Sum of Odd is <b>"+ odd+ "</b> And the sum of Even is <b>"+even+"</b>"  
+}
+
+    </script>
+    <title>Loop Task 8</title>
+
+</head>
+<body>
+    <h2>Program 1 : Value factorial</h2>
+            <input type="text" id="number1">
+            <button onclick="getTheFactorialValue()" >Calculate</button>
+            <p  id="result"></p>
+
+    <h2>Program 2 : Add the digits of a number together</h2>
+            <input type="text" id="number2">
+            <button onclick="addDigitsOfNumber()" >Calculate</button>
+            <p id="result2"></p>
+
+    <h2>Program 3 : The Sum of odd and even digits of a  Number</h2>
+    <input type="text" id="number3">
+    <button onclick="SumOfOddsAndEven()" >Calculate</button>
+    <p id="result3"></p>
+</body>
+</html>
